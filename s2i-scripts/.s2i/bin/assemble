@@ -13,11 +13,15 @@ config_s2i
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
 
+cp /home/student/D288-apps/*  ../*.html
+
+DATEAUX= $(date "+%Y-%m-%d")
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
 
 echo "---> Creating info page"
 echo "Page built on $DATE" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+echo "El nuevo mensaje mas el date $DATE_AUX" >> ./info.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
